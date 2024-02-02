@@ -1,0 +1,30 @@
+meta {
+  name: Buscar
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_ipva}}/api/ipva/v1/historicoRestricao/buscar?pagina=0&elementosPorPagina=15&nomeCampoColuna=cdRenavam&tipoOrdenacao=desc&usuarioLogado={{usuarioLogado}}
+  body: none
+  auth: none
+}
+
+query {
+  pagina: 0
+  elementosPorPagina: 15
+  nomeCampoColuna: cdRenavam
+  tipoOrdenacao: desc
+  usuarioLogado: {{usuarioLogado}}
+  ~cdRenavam: 955538262
+  ~dtInicio: 20150508
+  ~dtFinal: 20150722
+  ~tpRestricao: 4
+  ~dtAtualizacao: 23/07/2015 06:45:43
+  ~dtInclusaoHist: 23/07/2015 06:45:45
+  ~cdPessoaOperacao: SAe
+}
+
+headers {
+  Accept: application/json
+}

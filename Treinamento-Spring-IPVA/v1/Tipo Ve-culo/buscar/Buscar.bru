@@ -1,0 +1,26 @@
+meta {
+  name: Buscar
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_ipva}}/api/ipva/v1/tipoVeiculo/buscar?nmTipo=tes&usuarioLogado={{usuarioLogado}}
+  body: none
+  auth: none
+}
+
+query {
+  nmTipo: tes
+  usuarioLogado: {{usuarioLogado}}
+  ~cdTipo: 74
+  ~flAtivo: 0
+  ~pagina: 0
+  ~elementosPorPagina: 15
+  ~nomeCampoColuna: cdTipo
+  ~tipoOrdenacao: asc
+}
+
+headers {
+  Accept: application/json
+}

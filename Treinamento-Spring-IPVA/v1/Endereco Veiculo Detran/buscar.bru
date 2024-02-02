@@ -1,0 +1,32 @@
+meta {
+  name: buscar
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_ipva}}/api/ipva/v1/enderecoVeiculo/buscar?pagina=0&elementosPorPagina=15&nomeCampoColuna=cdProprietario&tipoOrdenacao=desc&usuarioLogado={{usuarioLogado}}
+  body: none
+  auth: none
+}
+
+query {
+  pagina: 0
+  elementosPorPagina: 15
+  nomeCampoColuna: cdProprietario
+  tipoOrdenacao: desc
+  usuarioLogado: {{usuarioLogado}}
+  ~cdRenavam: 516596705
+  ~nmProprietario: ALBANo
+  ~cdProprietario: 16314387515
+  ~dsLogradouro: AV.POETa
+  ~dsBairro: ATALAIa
+  ~dsMunicipio: ARACAJu
+  ~cdCep: 49037490
+  ~nrTelefone: 999999999
+  ~dsEmail: K@BOL.com
+}
+
+headers {
+  Accept: application/json
+}

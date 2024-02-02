@@ -1,0 +1,31 @@
+meta {
+  name: Atualiza--o
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{base_url_ipva}}/api/ipva/v1/cotacao/atualizar
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "cdFonte": "<integer>",
+    "cdModelo": "<long>",
+    "cdTipoCarroceria": "<integer>",
+    "cdTipoCombustivel": "<integer>",
+    "nrAnoExercicio": "<long>",
+    "nrAnoFabricacao": "<long>",
+    "vlVenalCotado": "<number>",
+    "dtOperacao": "<dateTime>",
+    "cdPessoaOperacao": "<string>",
+    "dsMotivoOperacao": "<string>"
+  }
+}

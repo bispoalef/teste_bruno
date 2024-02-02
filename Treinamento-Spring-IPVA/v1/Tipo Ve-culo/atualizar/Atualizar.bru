@@ -1,0 +1,28 @@
+meta {
+  name: Atualizar
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{base_url_ipva}}/api/ipva/v1/tipoVeiculo/atualizar?usuarioLogado={{usuarioLogado}}
+  body: json
+  auth: none
+}
+
+query {
+  usuarioLogado: {{usuarioLogado}}
+}
+
+headers {
+  Content-Type: application/json
+  Accept: application/json
+}
+
+body:json {
+  {
+    "cdTipo": "72",
+    "flAtivo": "0",
+    "nmTipo": "teste3"
+  }
+}

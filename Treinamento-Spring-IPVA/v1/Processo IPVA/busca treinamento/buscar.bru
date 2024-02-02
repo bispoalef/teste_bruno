@@ -1,0 +1,117 @@
+meta {
+  name: buscar
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_ipva}}/api/ipva/v1/consultaProcesso/buscaCompleta?tpProcesso=1&pagina=0&elementosPorPagina=15&nomeCampoColuna=nrProcesso&tipoOrdenacao=asc&usuarioLogado={{usuarioLogado}}
+  body: none
+  auth: none
+}
+
+query {
+  tpProcesso: 1
+  pagina: 0
+  elementosPorPagina: 15
+  nomeCampoColuna: nrProcesso
+  tipoOrdenacao: asc
+  usuarioLogado: {{usuarioLogado}}
+  ~nrProcesso: 123456
+  ~cdTipoProcesso: 7
+  ~nrAnoExercicio: 2023
+  ~cdRenavam: 754712800
+  ~dtOcorrencia: 14/06/2011 00:00:00
+  ~dtCadastro: 06/07/2010 00:00:00
+  ~cdPessoaFuncionario: 25617869515
+  ~nrParecer: 9999999999
+  ~flPagamento: 1
+  ~nrDae: 20170160389007
+  ~dsJustificativa: TESTe
+  ~cdTipoTransacao: 0
+  ~dtInicioVigencia: 02/11/1993 00:00:00
+  ~dtFimVigencia: 02/11/1999 00:00:00
+  ~cdTipoOperacao: I
+  ~vlRestituido: 590.59
+  ~cdContribuinte: 66270448549
+  ~nmContribuinte: alef
+  ~dtVenda: 11/05/2013 00:00:00
+}
+
+headers {
+  Accept: application/json
+}
+
+tests {
+  // var template = `
+  // <canvas id="myChart" height="75"></canvas>
+  // 
+  // <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> 
+  // 
+  // <script>
+  //     var ctx = document.getElementById("myChart");
+  // 
+  //     var myChart = new Chart(ctx, {
+  //         type: "bar",
+  //         data: {
+  //             labels: [],
+  //             datasets: [{
+  //                 data: [],
+  //                 
+  //                 // Change these colours to customize the chart
+  //                 backgroundColor: ["#003f5c", "#58508d", "#bc5090", "#ff6361", "#ffa600"],
+  //             }]
+  //         },
+  //         options: {
+  //             legend: { display: false },
+  //             title: {
+  //                 display: true,
+  //                 text: 'Count'
+  //             },
+  //             scales: {
+  //                 xAxes: [{
+  //                     display: true,
+  //                     scaleLabel: {
+  //                         display: true,
+  //                         labelString: 'Items'
+  //                     }
+  //                 }],
+  //                 yAxes: [{
+  //                     display: true,
+  //                     scaleLabel: {
+  //                         display: true,
+  //                         labelString: 'Count'
+  //                     }
+  //                 }]
+  //             }
+  //         }
+  // 
+  //     });
+  // 
+  //     // Access the data passed to pm.visualizer.set() from the JavaScript
+  //     // code of the Visualizer template
+  //     pm.getData(function (err, value) {
+  //         myChart.data.datasets[0].data = value.response.dados.paginacao.totalElementosDaPagina;
+  //         myChart.data.labels = ["Total Elements"];
+  //         myChart.update();
+  //     });
+  // 
+  // </script>`;
+  // 
+  // function constructVisualizerPayload() {
+  //     var res = pm.response.json();
+  //     
+  //     var visualizerData = {
+  //         
+  //         // Labels take an array of strings
+  //         labels: ["Total Elements"],
+  //         
+  //         // Data takes an array of numbers
+  //         data: [res.dados.paginacao.totalElementosDaPagina]
+  //     };
+  // 
+  //     return {response: visualizerData};
+  // }
+  // 
+  // pm.visualizer.set(template, constructVisualizerPayload());
+}

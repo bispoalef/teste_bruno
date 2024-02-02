@@ -1,0 +1,32 @@
+meta {
+  name: buscar
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_ipva}}/api/ipva/v1/historicoVeiculoIpva/buscar?tpOperacao=E&pagina=0&elementosPorPagina=15&nomeCampoColuna=dtOperacao&tipoOrdenacao=desc&usuarioLogado={{usuarioLogado}}
+  body: none
+  auth: none
+}
+
+query {
+  tpOperacao: E
+  pagina: 0
+  elementosPorPagina: 15
+  nomeCampoColuna: dtOperacao
+  tipoOrdenacao: desc
+  usuarioLogado: {{usuarioLogado}}
+  ~cdRenavam: 99999999824
+  ~dtInclusaoHistorico: 10/08/2016 16:13:40
+  ~cdCampo: 244
+  ~vlCampoAnterior: jean
+  ~cdPessoaOperacao: 01560393000150
+  ~nrArquivo: 2008092212042
+  ~dsMotivoOperacao: WS
+  ~dtOperacao: 07/06/2016 16:16:13
+}
+
+headers {
+  Accept: application/json
+}

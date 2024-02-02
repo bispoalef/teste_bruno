@@ -1,0 +1,33 @@
+meta {
+  name: buscar
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_ipva}}/api/ipva/v1/historicoInadimplencia/buscar?cdRenavam=281652236&nrExercicio=2014&vlValorDevido=80.32&cdUsuarioGeracao=SAe&dtGeracao=29/05/2015 07:49:32&dtBaixa=14/04/2016 09:42:51&cdUsuarioBaixa=SAe&dsMotivoBaixa=ATUALIZAcao&cdPessoaDevedora=04013854503&nmPessoaDevedora=nome INCONSISTENTe&pagina=0&elementosPorPagina=15&tipoOrdenacao=desc&usuarioLogado={{usuarioLogado}}
+  body: none
+  auth: none
+}
+
+query {
+  cdRenavam: 281652236
+  nrExercicio: 2014
+  vlValorDevido: 80.32
+  cdUsuarioGeracao: SAe
+  dtGeracao: 29/05/2015 07:49:32
+  dtBaixa: 14/04/2016 09:42:51
+  cdUsuarioBaixa: SAe
+  dsMotivoBaixa: ATUALIZAcao
+  cdPessoaDevedora: 04013854503
+  nmPessoaDevedora: nome INCONSISTENTe
+  pagina: 0
+  elementosPorPagina: 15
+  tipoOrdenacao: desc
+  usuarioLogado: {{usuarioLogado}}
+  ~nomeCampoColuna: nrExercicio
+}
+
+headers {
+  Accept: application/json
+}

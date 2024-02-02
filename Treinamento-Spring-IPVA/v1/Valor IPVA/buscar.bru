@@ -1,0 +1,34 @@
+meta {
+  name: buscar
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_ipva}}/api/ipva/v1/valorIPVA/buscar?pagina=0&elementosPorPagina=15&nomeCampoColuna=cdModelo&tipoOrdenacao=asc&usuarioLogado={{usuarioLogado}}
+  body: none
+  auth: none
+}
+
+query {
+  pagina: 0
+  elementosPorPagina: 15
+  nomeCampoColuna: cdModelo
+  tipoOrdenacao: asc
+  usuarioLogado: {{usuarioLogado}}
+  ~cdModelo: 304126
+  ~cdTipoCombustivel: 3
+  ~nrAnoExercicio: 2015
+  ~nrAnoFabricacao: 2013
+  ~vlMediaCotacao: 115067.50
+  ~vlBaseCalculoIPVA: 110234.67
+  ~cdTipoCarroceria: 2
+  ~dtOperacao: 21/07/2015 10:51:11
+  ~cdPessoaOperacao: 25617869515
+  ~tpOperacao: I
+  ~dsMotivoOperacao: CADASTRo
+}
+
+headers {
+  Accept: application/json
+}

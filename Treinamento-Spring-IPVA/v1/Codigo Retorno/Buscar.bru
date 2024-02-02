@@ -1,0 +1,26 @@
+meta {
+  name: Buscar
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_ipva}}/api/ipva/v1/codigoRetorno/buscar?pagina=0&elementosPorPagina=15&nomeCampoColuna=nrCodigo&tipoOrdenacao=desc&usuarioLogado={{usuarioLogado}}
+  body: none
+  auth: none
+}
+
+query {
+  pagina: 0
+  elementosPorPagina: 15
+  nomeCampoColuna: nrCodigo
+  tipoOrdenacao: desc
+  usuarioLogado: {{usuarioLogado}}
+  ~nrCodigo: 0
+  ~cdTransacaoDetran: 117
+  ~dsCodigo: veiculo
+}
+
+headers {
+  Accept: application/json
+}

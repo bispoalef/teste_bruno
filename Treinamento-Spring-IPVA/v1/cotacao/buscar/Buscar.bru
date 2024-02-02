@@ -1,0 +1,33 @@
+meta {
+  name: Buscar
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url_ipva}}/api/ipva/v1/cotacao/buscar
+  body: none
+  auth: none
+}
+
+query {
+  ~cdFonte: <integer>
+  ~cdModelo: <long>
+  ~cdTipoCombustivel: <integer>
+  ~nrAnoFabricacao: <long>
+  ~nrAnoExercicio: <long>
+  ~vlVenalCotado: <number>
+  ~cdTipoCarroceria: <integer>
+  ~dtOperacao: <dateTime>
+  ~cdPessoaOperacao: <string>
+  ~tpOperacao: <string>
+  ~dsMotivoOperacao: <string>
+  ~pagina: 0
+  ~quantidade: 15
+  ~ordenacao: nrAnoFabricacao
+  ~tipoOrdenacao: asc
+}
+
+headers {
+  Accept: application/json
+}
